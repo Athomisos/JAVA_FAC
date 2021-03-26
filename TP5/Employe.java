@@ -2,20 +2,25 @@
 public class Employe extends Person{
 	private int NbHeureContract;
 	private int NbHeureSup;
-	private float partVariable;
 	private float partFixe;
 	private float tauxHoraireFixe;
 	private float tauxHoraireVar;
 	
-	public Employe(String name, float partVariable, float tauxHoraireFixe, float tauxHoraireVar, int NbHeureContract) {
+	public Employe(String name, float tauxHoraireFixe, float tauxHoraireVar, int NbHeureContract) {
 		super(name);
 		this.NbHeureSup = 0;
 		this.NbHeureContract = NbHeureContract;
-		this.partVariable = 0;
 		this.partFixe = (NbHeureContract *4) * tauxHoraireFixe;
 		this.tauxHoraireFixe = tauxHoraireFixe;
 		this.tauxHoraireVar = tauxHoraireVar;
 	}
+
+	
+	
+	public int getNbHeureContract() {
+		return NbHeureContract;
+	}
+
 
 
 	public int getNbHeureSup() {
@@ -29,7 +34,7 @@ public class Employe extends Person{
 
 
 	public float getPartVariable() {
-		return partVariable;
+		return (NbHeureSup * tauxHoraireVar);
 	}
 
 

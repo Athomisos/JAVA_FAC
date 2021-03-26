@@ -5,8 +5,8 @@ public class Commercial extends Cadre {
 	protected static float SUM_CHIFFRE_AFFAIRE = 0;
 
 	
-	public Commercial(String name, float partFixe, float coefPartVar) {
-		super(name, partFixe, coefPartVar);
+	public Commercial(String name, float partFixe) {
+		super(name, partFixe, COEF_PART_VAR);
 	}
 	
 	public void addChiffreAffaire(float inputChiffreAffaire) {
